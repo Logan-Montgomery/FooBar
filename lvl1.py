@@ -1,4 +1,4 @@
-#return the maximum prod on a list of integers
+#return the maximum product on a list of integers
 def solution4(xs):
     if len(xs) == 2:
         prod = xs[0]*xs[1]
