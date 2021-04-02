@@ -12,7 +12,10 @@ def solution(pegs):
     #print(rn)
     if len(Ls)%2==0:  #a-e=L1-L2+L3....
         x=2*rn
-    else:
+    else:                       #x=2.66666=8/3,  right now x=4
+        if rn%3!=0:
+            xnum=rn*2
+            xden=3
         x=(2*rn)/3  #a+e=
     
     #print(x)
@@ -30,5 +33,5 @@ def solution(pegs):
     if x<1 or Ls[0]<x or Ls[-1]<x: #if radius no worky, return [-1,-1]
         return [-1,-1]
     if x%1!=0:
-        return [int(x*3),3]
+        return [xnum,xden]
     return [int(x),1]
